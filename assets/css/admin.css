@@ -1,0 +1,29 @@
+/**
+ * ExhibitPress Admin Stylesheet
+ * 
+ */
+
+/* =ExhibitPress settings
+----------------------------------------------- */
+
+.archive_layout ul li {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+ 
+.archive_layout ul li input[type="radio"] {
+	display: none;
+}
+
+.archive_layout ul li label {
+	display: block;
+	text-align: center;
+}
+
+.archive_layout ul li img {
+	border: 1px dotted #ddd;
+}
+
+.archive_layout ul li :checked + img {
+	border: 1px solid #bbb;
+}

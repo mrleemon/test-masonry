@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "occ/exhibitpress-masonry",
+  "title": "ExhibitPress: Masonry",
+  "description": "Display a masonry gallery.",
+  "textdomain": "exhibitpress",
+  "category": "media",
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": []
+    },
+    "columns": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 8,
+      "default": 3
+    },
+    "gap": {
+      "type": "string",
+      "default": "10px"
+    },
+    "crop": {
+      "type": "boolean",
+      "default": false
+    },
+    "lightbox": {
+      "type": "boolean",
+      "default": false
+    },
+    "lightbox_background": {
+      "type": "string",
+      "default": "black",
+      "enum": [
+        "black",
+        "white"
+      ]
+    },
+    "captions": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "align": [
+      "center"
+    ]
+  },
+  "script": [
+    "imagesloaded",
+    "masonry"
+  ],
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": [
+    "file:./style-index.css",
+    "file:./view.css"
+  ],
+  "editorStyle": "file:./index.css"
+}
